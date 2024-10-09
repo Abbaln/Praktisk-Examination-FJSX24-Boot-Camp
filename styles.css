@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    display: flex;
+    
 }
 
 header {
@@ -76,23 +76,93 @@ main {
 }
 
 footer {
-    background-color: var(--color-4);
+    background-color: var(--color-3);
     text-align: center;
-    position: fixed;
     width: 100%;
     padding: 10px 0;
     margin-top: 20px;
     bottom: 0;
 }
 
+section.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  figure {
+    background-color: var(--color-2);
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 .menu-toggle {
     display: none;
+}
+
+/* Card Grid Styles */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-4);
+    text-decoration: none;
+    color: var(--color-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+}
+
+.card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:active {
+    transform: scale(0.98);
 }
 
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        display: none; /* Hide menu by default */
+        display: none; 
         background-color: var(--color-2);
         width: 100%;
         position: absolute;
@@ -102,7 +172,7 @@ footer {
     }
 
     nav ul.active {
-        display: flex; /* Show menu when it has the "active" class */
+        display: flex;
     }
 
     nav ul li {
@@ -111,6 +181,10 @@ footer {
     }
 
     .menu-toggle {
-        display: block; /* Show the hamburger icon */
+        display: block;
+    }
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) 
     }
 }
+
