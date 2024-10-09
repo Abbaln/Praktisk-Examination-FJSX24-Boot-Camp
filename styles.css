@@ -26,8 +26,6 @@ header {
     align-items: center;
     padding: 20px;
     position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 h1 {
@@ -103,9 +101,64 @@ section.footer-icons {
 
 .menu-toggle {
     display: none;
+    
 }
 
 /* Card Grid Styles */
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start;
+    background-color: var(--color-4);
+    text-decoration: none;
+    color: var(--color-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    gap: 20px; /* Space between sections */
+}
+
+/* Styling for the images inside hero */
+.hero-images {
+    display: flex; /* Use flexbox to align images in a row */
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Gap between each image */
+    margin-bottom: 15px; /* Space between the images and the text */
+}
+
+.hero img {
+    display: block; /* Ensures the images respect their width */
+    max-width: 100%; /* Responsive image handling */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hero h3 {
+    font-size: 1.25rem;
+    margin: 10px 0 5px;
+    text-align: center;
+    color: inherit;
+}
+
+.hero p {
+    font-size: 1rem;
+    text-align: center;
+    color: inherit;
+}
+
+.hero a {display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;}
+
+.hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -138,6 +191,7 @@ section.footer-icons {
     max-width: 100%;
     border-radius: 8px;
 }
+
 
 .card h3 {
     font-size: 1.25rem;
@@ -185,6 +239,13 @@ section.footer-icons {
     }
     .card-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) 
+    }
+    .hero-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+
+    .hero img {
+        width: 100%; /* Make sure images scale responsively on mobile */
     }
 }
 
