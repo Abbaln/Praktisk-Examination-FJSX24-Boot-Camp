@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Genius</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="template.html">Templates</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section aria-labelledby="resource-section-title">
+            <h2 id="resource-section-title">Teaching Resources</h2>
+            <p>Find templates, tips, and resources to enhance your teaching experience.</p>
+            
+            <div class="card-grid">
+                <article class="card" aria-labelledby="Math with apples">
+                    <a href="template1.html" aria-label="View Math homework">
+                        <img src="/Images/Math.webp" alt="Math homework" width="200px">
+                        <h3 id="Math with apples">Learn to count with apples</h3>
+                        <p>Homework to help you count.</p>
+                    </a>
+                </article>
+    
+                <article class="card" aria-labelledby="Multipliactions Math">
+                    <a href="template2.html" aria-label="View Math homework with multipliactions">
+                        <img src="Images/Math2.webp" alt="Math with multiplication" width="200px">
+                        <h3 id="Multipliactions">Learn Multiplication</h3>
+                        <p>Practice your multipliactions.</p>
+                    </a>
+                </article>
+    
+                <article class="card" aria-labelledby="Subtractions Math">
+                    <a href="template3.html" aria-label="View Math homework with subtractions">
+                        <img src="Images/math3.webp" alt="Math with subtractions" width="200px">
+                        <h3 id="Subtractions">Learn Subtractions</h3>
+                        <p>Practice your subtractions.</p>
+                    </a>
+                </article>
+
+                <article class="card" aria-labelledby="Combining and algebra Math">
+                    <a href="template4.html" aria-label="View Math involving algebra">
+                        <img src="Images/math4.webp" alt="Math with algebra" width="200px">
+                        <h3 id="Algebra">Learn Algebra</h3>
+                        <p>Practice your algebra.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2024 Genius. Custom Made Templates. All rights reserved.</p>
+        <section class="footer-icons" aria-label="Social media links">
+            <figure aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </figure>
+            <figure aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </figure>
+            <figure aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </figure>
+          </section>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

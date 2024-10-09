@@ -3,27 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Made Homeworks</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Studies</h1>
+        <h1>Genius</h1>
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
         <nav>
             <ul id="nav-list">
-                <li><a href="Home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="template.html">Templates</a></li>
-                <li><a href="about.html">About the Project</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2></h2>
-        <p>Find templates, tips, and resources to enhance your teaching experience.</p>
+        <section aria-labelledby="resource-section-title">
+            <h2 id="resource-section-title">Develop your math skills</h2>
+            <p>Enhance and develop your math skills with our custom made math templates</p>
+            
+            <div class="card-grid"> 
+                <article class="hero" aria-labelledby="Main content">
+                    <a href="template.html" aria-label="Go to templates">
+                        <div class="hero-images">
+                            <img src="/Images/homemathpic1.webp" alt="Laptop with math equations" width="350px">
+                            <img src="/Images/homemathpic2.webp" alt="Two kids laughing working with a laptop" width="350px">
+                            <img src="/Images/homemathpic3.webp" alt="Woman writing equations on a board" width="350px">
+                        </div>
+                        <h3 id="Main content">Find your next homework</h3>
+                        <p>Search through multiple different levels and difficulties.</p>
+                    </a>
+                </article>
+            </div>
+            
+        </section>
     </main>
+    
+    
     <footer>
-        <p>&copy; 2024 Custom Made Homeworks. All rights reserved.</p>
+        <p>&copy; 2024 Genius. Custom Made Templates. All rights reserved.</p>
+        <section class="footer-icons" aria-label="Social media links">
+            <figure aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </figure>
+            <figure aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </figure>
+            <figure aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </figure>
+          </section>
     </footer>
     <script>
         function toggleMenu() {
