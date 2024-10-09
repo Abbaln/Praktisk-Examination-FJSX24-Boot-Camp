@@ -1,0 +1,116 @@
+:root {
+    --color-1: #243642; /* Dark Blue */
+    --color-2: #387478; /* Teal */
+    --color-3: #629f9d; /* Light Teal */
+    --color-4: #e2f1e7; /* Soft Green */
+    --color-5: #f2f2f2; /* Light Gray */
+}
+
+body {
+    background-color: var(--color-5);
+    color: var(--color-1);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(1.5rem, 1rem, 3rem);
+}
+
+main {
+    display: flex;
+}
+
+header {
+    background-color: var(--color-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+    margin: 0;
+    color: var(--color-5);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-5);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    color: var(--color-5);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    color: var(--color-4);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--color-4);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    bottom: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hide menu by default */
+        background-color: var(--color-2);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when it has the "active" class */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+}

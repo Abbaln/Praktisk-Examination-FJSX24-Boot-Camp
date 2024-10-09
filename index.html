@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Made Homeworks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Studies</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="Home">Home</a></li>
+                <li><a href="template.html">Templates</a></li>
+                <li><a href="about.html">About the Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2></h2>
+        <p>Find templates, tips, and resources to enhance your teaching experience.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Custom Made Homeworks. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
